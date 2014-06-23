@@ -1,4 +1,4 @@
-package be.crydust.deleteme.download.https;
+package be.crydust.fetchurl;
 
 public class Response {
 

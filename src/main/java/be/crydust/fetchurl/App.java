@@ -1,4 +1,4 @@
-package be.crydust.deleteme.download.https;
+package be.crydust.fetchurl;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -8,17 +8,16 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class FetchUrl {
+public class App {
 
     public static void main(String[] args) throws Exception {
         if (args.length < 1) {
-            System.err.println("Usage: java FetchUrl.jar https://keybase.io");
+            System.err.println("Usage: java -jar FetchUrl.jar https://keybase.io");
             System.exit(1);
         }
         String urlToRead = args[0];
 
         CryptoHack.removeCryptographyRestrictions();
-        System.setProperty("https.protocols", "TLSv1.2");
 
         System.out.printf("response = %s%n", request(urlToRead));
     }
