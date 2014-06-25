@@ -14,3 +14,11 @@ This repository is my exploration of the problem.
 Usage:
 
     java -jar FetchUrl.jar https://keybase.io
+
+For more debug info:
+
+    -Djavax.net.debug=ssl,handshake,failure
+
+For a strict connection:
+
+    -Dhttps.protocols=TLSv1.2
